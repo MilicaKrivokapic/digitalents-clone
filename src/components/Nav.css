@@ -1,0 +1,333 @@
+header {
+  background-color: transparent;
+  height: auto;
+  top: 0;
+  overflow: hidden;
+  z-index: 20;
+}
+
+header .hamburger {
+  display: none;
+}
+.nav-area {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header-nav {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--sun);
+  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.12549019607843137);
+  height: 4rem;
+  width: 100%;
+  padding: 0 16rem;
+  z-index: 3;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+.header-nav ul li a:focus {
+  outline: 2px solid #000;
+}
+.headerlogo {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+}
+
+.header-nav ul li a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 3rem;
+  position: relative;
+}
+.header-nav.nav-hidden ul li a::after {
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: rgb(0, 0, 0);
+  height: 2px;
+}
+.header-nav.nav-hidden ul li a:hover::after {
+  width: 100%;
+}
+
+.header-nav.nav-hidden ul li a,
+.header-nav.nav-hidden ul li a:after,
+.header-nav.nav-hidden ul li a:before {
+  transition: all 0.4s;
+}
+.anchor {
+  transform: translateY(-8rem);
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 1;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    opacity 0.1s linear;
+}
+.hamburger--collapse .hamburger-inner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    opacity 0.1s 0.22s linear;
+}
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
+Media queries for header+navi
+-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*----------- 
+For Desktop
+------------ */
+
+@media screen and (max-width: 1536px) {
+  header {
+    transition: transform 0.05s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-nav {
+    padding: 0 8rem;
+    z-index: 1;
+  }
+}
+/*--------------- 
+For lil' Desktoppe 
+-----------------*/
+@media screen and (max-width: 1280px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-nav {
+    padding: 0 4rem;
+  }
+  .headerlogo {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    min-height: 90px;
+    width: 100%;
+    position: fixed;
+  }
+  .headerlogo {
+    font-size: 2rem;
+  }
+  .nav-area-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+  }
+  .header-nav ul li a {
+    padding-right: 0;
+  }
+  header.open {
+    height: 100vh;
+  }
+  header .hamburger {
+    display: inline-block;
+    position: absolute;
+    top: 1.5rem;
+    right: 6rem;
+    z-index: 3;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  header .hamburger::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 2px;
+    background: #dedfe1c4;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    z-index: 0;
+  }
+  .header-nav {
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 50vh;
+    padding-top: 2rem;
+  }
+  .nav-hidden {
+    margin-top: -100vh;
+    box-shadow: none;
+  }
+  .navimg {
+    margin-bottom: 1rem;
+    padding-right: 5rem;
+  }
+  .header-nav ul {
+    -webkit-transition: all 0.26s ease-in-out;
+    -moz-transition: all 0.26s ease-in-out;
+    -ms-transition: all 0.26s ease-in-out;
+    -o-transition: all 0.26s ease-in-out;
+    transition: all 0.26s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .header-nav li {
+    padding: 1rem 2rem 0.5rem 5rem;
+  }
+}
+
+/*-------------- 
+for Tablet 
+----------------*/
+
+/*----------------
+For tiny widgets
+----------------*/
+
+@media screen and (max-width: 640px) {
+  .text {
+    margin: 7rem 1rem;
+  }
+  .header-nav {
+    padding-top: 5rem;
+    height: 60vh;
+  }
+  .header-nav ul {
+    min-width: max-content;
+  }
+  .header-nav li:last-child {
+    padding-bottom: 1rem;
+  }
+  header .hamburger {
+    transform: scale(0.5);
+    right: calc(50% - 35px);
+    bottom: 3rem;
+  }
+  .headerlogo {
+    margin-top: 3rem;
+  }
+}
+@media (orientation: landscape) and (max-width: 1024px) {
+  .header-nav {
+    height: 90vh;
+  }
+  .header-nav ul li {
+    padding: 0.5rem 2rem 0.5rem 5rem;
+  }
+}

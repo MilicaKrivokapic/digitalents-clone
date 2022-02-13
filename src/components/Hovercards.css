@@ -1,0 +1,301 @@
+.tiimit {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--storm);
+}
+.clouds {
+  background-image: url(../backgroundimg/storm.svg),
+    linear-gradient(180deg, transparent 0, transparent 150px, white);
+  background-color: white;
+  background-position: top;
+  background-repeat: repeat-x;
+  padding-top: 7rem;
+  display: block;
+  padding-bottom: 2rem;
+}
+
+/* 4.2 Hovercards */
+:root {
+  --card-height: 35rem;
+}
+.hovercards-container {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.hovercard {
+  display: block;
+  position: relative;
+  max-width: 28rem;
+  height: var(--card-height);
+  overflow: hidden;
+  background-color: black;
+}
+
+.hovercard:hover .hovercard-text {
+  transform: translateY(calc(-1 * var(--card-height)));
+  margin-top: 0;
+}
+.hovercard:hover .hovercard-arrow {
+  transform: rotate(180deg);
+}
+
+.hovercard:hover .media-image,
+.media-image:hover,
+.hovercard:hover .softdev-image,
+.hovercard:hover .ict-image {
+  filter: blur(1rem);
+  opacity: 0.2;
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.hover-gradient {
+  width: 100%;
+  height: 120%;
+  z-index: 10;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(255 0% 50% / 0.2) 50%,
+    hsl(0 0% 0% / 1)
+  );
+}
+
+.media-image {
+  padding-bottom: 4rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../backgroundimg/media.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / 1));
+}
+/* Background image Firefox 3.0+ */
+.media-image,
+x:default {
+  background-image: url("../backgroundimg/media.jpg");
+}
+
+.softdev-image {
+  padding-bottom: 4rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../backgroundimg/softdev.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Background image Firefox 3.0+ */
+.softdev-image,
+x:default {
+  background-image: url("../backgroundimg/softdev.jpg");
+}
+
+.ict-image {
+  padding-bottom: 4rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../backgroundimg/ict.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Background image Firefox 3.0+ */
+.ict-image,
+x:default {
+  background-image: url("../backgroundimg/ict.jpg");
+}
+
+.hovercard-arrow {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0.2rem;
+  color: white;
+  font-size: 2rem;
+  z-index: 0;
+  transition: transform 0.3s;
+}
+.hovercard-text {
+  margin-top: -4.2rem;
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1, 25;
+  padding: 1rem;
+  transition: transform 0.3s, margin-top 0.3s;
+}
+
+.hovercard-text > p {
+  padding-bottom: 2rem;
+}
+
+.hovercard-title {
+  color: white;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.txt-row {
+  padding-top: 4rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.txt-under-hovercard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+}
+.txt-under-hovercard p {
+  display: block;
+  line-height: 1.75;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.hovercards-nappi-container {
+  margin: 4rem 0 10rem 0;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
+Media queries for Hovercards
+-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*----------- 
+For Desktop
+------------ */
+
+@media screen and (max-width: 1536px) {
+  .hovercard-text {
+    font-size: 0.95rem;
+    /* margin-top: -3.5rem; */
+    line-height: 1.25;
+  }
+  :root {
+    --card-height: 36rem;
+  }
+  .hovercard-title {
+    padding-bottom: 1rem;
+  }
+  .hovercard-text > p {
+    padding-bottom: 0.5rem;
+  }
+  .hovercard {
+    max-width: 33%;
+  }
+}
+/*--------------- 
+For lil' Desktoppe 
+-----------------*/
+@media screen and (max-width: 1280px) {
+  .hovercard-arrow {
+    margin-left: 2rem;
+  }
+}
+/*---------- 
+For Tablet 
+------------*/
+@media screen and (max-width: 1024px) {
+  .hovercard-text {
+    font-size: 0.85rem;
+  }
+}
+/*--------- 
+For phone
+-----------*/
+@media screen and (max-width: 768px) {
+  :root {
+    --card-height: 28rem;
+  }
+  .hovercards-container {
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .hovercard {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: none;
+    max-width: 100%;
+    background-color: transparent;
+  }
+  .hover-gradient {
+    display: none;
+  }
+  .media-image,
+  .ict-image,
+  .softdev-image {
+    width: 30%;
+  }
+  .hovercard-title {
+    color: #000000;
+  }
+  .hovercard-text {
+    width: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    color: #000000;
+    margin-top: 0;
+    font-size: 0.95rem;
+  }
+  .hovercard-text p {
+    line-height: 1.5rem;
+    padding-bottom: 0rem;
+  }
+  .hovercard:hover .hovercard-text {
+    transform: none;
+    margin-top: none;
+  }
+  .hovercard:hover .media-image,
+  .media-image:hover,
+  .hovercard:hover .softdev-image,
+  .hovercard:hover .ict-image {
+    filter: none;
+    opacity: 1;
+    transition: none;
+  }
+  .hovercard-arrow {
+    display: none;
+  }
+}
+/*----------------
+For tiny widgets
+----------------*/
+@media screen and (max-width: 640px) {
+  .media-image,
+  .ict-image,
+  .softdev-image {
+    display: none;
+  }
+  .hovercard-text {
+    justify-content: space-around;
+    margin-top: 0;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    border-bottom: 0.2rem solid #ffc61e;
+  }
+  .hovercard {
+    height: auto;
+  }
+  .txt-under-hovercard {
+    width: auto;
+  }
+  .header-nav {
+    height: 60vh;
+  }
+}

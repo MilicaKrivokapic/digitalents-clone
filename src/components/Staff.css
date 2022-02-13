@@ -1,0 +1,33 @@
+.staff {
+  width: 30rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding-bottom: 4rem;
+}
+.staff-member {
+  width: 50%;
+  display: block;
+}
+.name {
+  font-weight: 600;
+  padding-top: 2rem;
+}
+.title {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.detail {
+  font-size: 0.96rem;
+}
+/*---------- 
+Query For Tablet 
+------------*/
+@media screen and (max-width: 640px) {
+  .staff {
+    max-width: 100%;
+    flex-flow: column;
+  }
+}

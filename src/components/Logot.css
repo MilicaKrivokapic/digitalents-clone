@@ -1,0 +1,24 @@
+.yhteistyo-logo-container {
+  display: flexbox;
+  flex-flow: row;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 64rem;
+}
+.yhteistyo-logo-container img,
+.yhteistyo-logo-container picture {
+  height: 9rem;
+  max-width: 9rem;
+  object-fit: contain;
+  margin: 0rem 1.5rem;
+}
+
+/*---------- 
+For Tablet 
+------------*/
+@media screen and (max-width: 1024px) {
+  .yhteistyo-logo-container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,117 @@
+.hakijalle-container {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#h2column {
+  padding-bottom: 0.3rem;
+  padding-top: 2rem;
+  border-bottom: 5px solid white;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 3rem;
+}
+.hakijalle {
+  max-width: 1280px;
+  border-radius: 0.5rem;
+  background-color: #ffeb77;
+  padding-top: 3rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-bottom: 3rem;
+  padding: 0 6rem;
+}
+.hakija-wrapper {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Comic {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+}
+.hakijalle-txt {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  width: 25rem;
+  line-height: 1.7rem;
+  margin-left: 4rem;
+  padding-bottom: 8rem;
+}
+.hakijalle-txt > p {
+  display: block;
+  line-height: 1.75;
+  margin: 1rem 1rem;
+}
+.hakijalle-txt p::before {
+  content: "•";
+}
+
+.line {
+  border-top: 1px solid #000;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+}
+.academy-link {
+  color: #1f3655;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
+Media queries for Hakijalle
+-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*---------- 
+For Tablet 
+------------*/
+@media screen and (max-width: 1024px) {
+  .hakijalle {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .hakija-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .Comic {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    max-width: 100%; /* fallback if needed */
+    display: inline;
+  }
+  .hakijalle-txt {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+}
+/*--------- 
+For phone
+-----------*/
+@media screen and (max-width: 768px) {
+  .Comic {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hakijalle {
+    padding: 0;
+    margin: 0;
+  }
+  .hakija-wrapper {
+    padding: 0;
+    margin: 0;
+  }
+}

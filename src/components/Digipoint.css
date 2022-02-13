@@ -1,0 +1,107 @@
+.digipoint {
+  background-image: linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 25%,
+    #000 0,
+    #000 75%,
+    transparent 0,
+    transparent
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.digipoint-container {
+  background-color: white;
+  padding: 3rem;
+  border: 5px solid var(--sun);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 65rem;
+}
+#digipointHeading {
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: capitalize;
+  text-align: start;
+}
+.digipoint-text {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.digipoint-text > p {
+  padding: 1rem 5rem;
+  line-height: 1.7;
+  display: block;
+}
+.digipoint-logot {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+}
+.digipoint-logot picture,
+.digipoint-logot img {
+  width: 100%;
+}
+.digipoint-logot img {
+  padding-bottom: 2rem;
+}
+.digipoint-txt-link {
+  color: #1f3655;
+}
+.digipoint-nappi-container {
+  margin: 4rem 0 10rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .digipoint {
+    padding: 1rem;
+  }
+  .digipoint-container {
+    max-width: 95vw;
+    background-color: white;
+
+    margin: 0;
+  }
+  .digipoint-logot {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+/*----------------
+For tiny widgets
+----------------*/
+@media screen and (max-width: 640px) {
+  .digipoint-container {
+    padding: 1rem;
+    width: 100vw;
+    flex-flow: column nowrap;
+  }
+  .digipoint-logot {
+    width: 30%;
+  }
+  .digipoint-text {
+    margin: 0;
+  }
+  #digipointHeading {
+    margin-left: 3rem;
+  }
+  .digipoint-text > p {
+    padding: 1rem 1rem;
+  }
+}

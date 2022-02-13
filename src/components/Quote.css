@@ -1,0 +1,105 @@
+.dark {
+  background-color: rgb(0, 0, 0);
+}
+.dark-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10rem;
+  justify-content: center;
+}
+dark-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+blockquote p {
+  font-family: HelsinkiGrotesk, sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--sun);
+  border-radius: 5px;
+  display: block;
+  line-height: 1.5;
+}
+blockquote p::before {
+  content: "\201C";
+  font-size: 1.5rem;
+  color: white;
+}
+blockquote p::after {
+  content: "\201D";
+  font-size: 1.5rem;
+  color: white;
+}
+.helsinki {
+  height: 10rem;
+  max-width: 10rem;
+  object-fit: contain;
+  margin: 0rem 1.5rem;
+}
+.stadin-ao-container {
+  display: flex;
+  height: 100%;
+  object-fit: cover;
+  justify-content: center;
+}
+.quote {
+  width: 40rem;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
+Media queries for Quote
+-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*--------------- 
+For lil' Desktoppe 
+-----------------*/
+@media screen and (max-width: 1280px) {
+  .stadin-ao-container img {
+    max-width: 50vw;
+  }
+}
+/*---------- 
+For Tablet 
+------------*/
+@media screen and (max-width: 1024px) {
+  .dark-container {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .dark-container blockquote {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .dark-container blockquote p {
+    padding: 2rem 2rem;
+  }
+  .stadin-ao-container {
+    width: 100%;
+  }
+  .stadin-ao-container img {
+    max-width: 50vw;
+  }
+}
+/*--------- 
+For phone
+-----------*/
+@media screen and (max-width: 768px) {
+  .stadin-ao-container img {
+    max-width: 100%;
+  }
+}
+/*----------------
+For tiny widgets
+----------------*/
+@media screen and (max-width: 640px) {
+  .digipoint-container {
+    padding: 0;
+  }
+}

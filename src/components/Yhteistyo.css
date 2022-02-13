@@ -1,0 +1,101 @@
+#yhteistyo-otsikko {
+  margin-bottom: 2rem;
+}
+.yhteistyo {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+.yhteistyowrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: auto;
+  min-height: 20rem;
+  width: 64rem;
+}
+.yhteistyokuva {
+  background-image: url(../backgroundimg/v8a0749.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 50%;
+}
+/* Background image Firefox 3.0+ */
+.yhteistyokuva,
+x:default {
+  background-image: url(../backgroundimg/v8a0749.jpg);
+}
+
+.yhteistyoteksti {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  padding: 1rem 3rem;
+  line-height: 1.75rem;
+  background-color: #7e6f731f;
+}
+.yhteistyoteksti > p {
+  display: block;
+  line-height: 1.75;
+  margin: 0.5rem 0;
+}
+.yhteistyo-nappi-container {
+  align-self: center;
+  margin: 1rem;
+  width: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
+Media queries for Yhteistyö
+-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*---------- 
+For Tablet 
+------------*/
+@media screen and (max-width: 1024px) {
+  .yhteistyowrapper {
+    width: 100%;
+  }
+}
+
+/*----------------
+For tiny widgets
+----------------*/
+@media screen and (max-width: 640px) {
+  .yhteistyo h1 {
+    font-size: 1.4rem;
+  }
+  .yhteistyowrapper {
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+  }
+  .yhteistyo h2 {
+    font-size: 9vw;
+  }
+  .yhteistyokuva {
+    width: 100%;
+    height: 150vh;
+  }
+  .yhteistyoteksti {
+    font-size: 0.95rem;
+    width: 90%;
+    position: absolute;
+    justify-content: center;
+    line-height: 1;
+    background-color: #e5e7eb;
+    box-shadow: 0 0.2rem 1rem rgb(0 0 0 / 7%), 0 1rem 2rem rgb(0 0 0 / 13%);
+  }
+  .yhteistyoteksti p {
+    padding: 1rem;
+  }
+}

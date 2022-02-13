@@ -1,0 +1,28 @@
+.nappi {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.nappi.black {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 2rem 0;
+  min-width: 10rem;
+}
+.nappi.black:hover {
+  background-color: var(--sun);
+  color: black;
+}
+.nappi.yellow {
+  border: 0.2rem solid var(--sun);
+  background-color: white;
+  color: black;
+}
+.nappi.yellow:hover {
+  background-color: var(--sun);
+}

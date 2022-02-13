@@ -1,0 +1,100 @@
+/*---------------------
+Global general styles
+-----------------------*/
+@font-face {
+  font-family: HelsinkiGrotesk;
+  src: url(https://makasiini.hel.ninja/delivery/HelsinkiGrotesk/565d73a693abe0776c801607ac28f0bf.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: HelsinkiGrotesk;
+  src: url(https://makasiini.hel.ninja/delivery/HelsinkiGrotesk/533af26cf28d7660f24c2884d3c27eac.woff)
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: HelsinkiGrotesk, sans-serif;
+}
+h1 {
+  font-family: HelsinkiGrotesk, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+h3 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+/*---------------------
+Global variables
+-----------------------*/
+
+:root {
+  --storm: #dedfe1;
+  --sun: #ffc61e;
+}
+
+body {
+  font-family: HelsinkiGrotesk, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+}
+/*---------------------
+Global queries
+-----------------------*/
+
+@media screen and (max-width: 1536px) {
+  * :root {
+    --card-height: 36rem;
+  }
+}
+
+/*-------------- 
+Accessebility 
+----------------*/
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hovercard-text {
+    transition: unset;
+  }
+  .hovercard-arrow {
+    transition: unset;
+  }
+}
+
+/*----------------
+Headerlogo
+------------------*/
+.headerlogo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+  padding: 1;
+  color: #000;
+  line-height: 1;
+  display: block;
+}

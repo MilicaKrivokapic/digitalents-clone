@@ -1,0 +1,64 @@
+.rows {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+.h-wrapper {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+/*-------- 
+Left Side  
+----------*/
+.column-left {
+  width: 30rem;
+  height: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+}
+/*------------ 
+4.2 Right Side  
+-------------- */
+.column-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
+Media queries for Contact
+-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*---------- 
+For Tablet 
+------------*/
+@media screen and (max-width: 1024px) {
+  .rows {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .column-right {
+    justify-content: center;
+    width: auto;
+  }
+  .column-left {
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*----------------
+For tiny widgets
+----------------*/
+@media screen and (max-width: 640px) {
+  .column-left {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .column-right {
+    font-size: 0.2rem;
+  }
+}
